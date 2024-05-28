@@ -1,0 +1,66 @@
+/*Reglage Generaux*/
+@font-face {
+    font-family: "mapolice";
+    src: url(./mapolice.ttf);
+}
+
+@font-face {
+    font-family: "policetexte";
+    src: url(./policetexte.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "policetexte" , sans-serif;
+
+}
+/*Header*/
+
+#header-haut {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 108, 211);
+    color: #000000;
+    margin: 0px;
+    padding: 15px;
+    width: 100vw;
+    height: 20vh;
+
+}
+
+#header-logo {
+    width: 25vw;
+}
+
+#header-titre {
+    width: 25vw;
+}
+
+#header-login {
+    width: 50vw;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px black;
+    font-family: "mapolice" ,sans-serif;
+}
+
+#logo {
+    width: 16vh;
+}
+
+/*mise en forme de formulaire*/
+
+input, label {
+    display : block;
+    margin-top: 3px;    
+}
