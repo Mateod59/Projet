@@ -13,10 +13,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --color-Rose: #FCD1D1;
+    --color-gris: #ECE2E1;
+    --color-bleuclair: #D3E0DC;
+    --color-noir: black;
 }
 
 body {
     font-family: "policetexte" , sans-serif;
+    text-shadow: 1px 1px 2px black;
 
 }
 /*Header*/
@@ -26,8 +31,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 108, 211);
-    color: #000000;
+    background-color: var(--color-Rose);
+    color: var(--color-bleu);
     margin: 0px;
     padding: 15px;
     width: 100vw;
@@ -36,31 +41,96 @@ body {
 }
 
 #header-logo {
-    width: 25vw;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: start;
 }
 
 #header-titre {
-    width: 25vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    padding-right: 5VW;;
 }
 
 #header-login {
-    width: 50vw;
+    width: 10vw;
+    border: white solid 3px;
+    border-radius: 6px;
+    padding: 10px;
 }
 
 h1 {
-    color: #ffffff;
+    color: var(--color-gris);
     font-size: 2.5rem;
-    text-shadow: 1px 1px 2px black;
+    
     font-family: "mapolice" ,sans-serif;
 }
 
 #logo {
     width: 16vh;
+    
 }
-
+/* Barre sous le header avec une image de fond*/
+#header-bas {
+    width: 100vw;
+    height: 8vh;
+    background-image:url("../image/livre.jpeg");
+    border-top: var(--color-Rose) solid 3px;
+}
 /*mise en forme de formulaire*/
 
 input, label {
     display : block;
-    margin-top: 3px;    
+    margin-top: 3px; 
+    width: 100%;   
 }
+
+/*partie central */
+#central {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/*Menu */
+
+nav {
+    width: 20vw;
+    height: 60vh;
+    background-color: var(--color-Rose);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 2px 2px 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bouton {
+    text-decoration: none;
+    color:var(--color-noir);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: block;
+    padding: 20px;
+    background-color: var(--color-bleuclair);
+    width: 80%;
+    border-radius: 10%;
+    box-shadow: black 2px 2px 10px 0;
+    transition: box-shadow 300ms; color: 300ms, background-color 500ms;
+}
+
+.bouton:hover {
+    box-shadow: none;
+}
+
+/* Le choix de site */
+
+/*la selection 
