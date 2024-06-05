@@ -25,6 +25,11 @@ body {
 
 }
 /*Header*/
+header {
+    position: fixed;
+    z-index: 10;
+    background-color: black;
+}
 
 #header-haut {
     display : flex;
@@ -64,11 +69,33 @@ body {
     padding: 10px;
 }
 
-h1 {
-    color: var(--color-gris);
-    font-size: 2.5rem;
-    
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-gris);   
     font-family: "mapolice" ,sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
 }
 
 #logo {
@@ -80,7 +107,8 @@ h1 {
     width: 100vw;
     height: 8vh;
     background-image:url("../image/livre.jpeg");
-    border-top: var(--color-Rose) solid 3px;
+    border-top: var(--color-bleuclair) solid 3px;
+   border-bottom: var(--color-bleuclair) solid 3px;
 }
 /*mise en forme de formulaire*/
 
@@ -101,6 +129,8 @@ input, label {
 /*Menu */
 
 nav {
+    position: fixed;
+    top: 28vh;
     width: 20vw;
     height: 60vh;
     background-color: var(--color-Rose);
@@ -110,6 +140,7 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 5;
 }
 
 .bouton {
@@ -131,6 +162,105 @@ nav {
     box-shadow: none;
 }
 
-/* Le choix de site */
+/*la partie central*/
+main {
+    position: relative;
+    top: 28vh;
+    left: 20vw;
+    width: 80vw;
+    padding: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-/*la selection 
+/*le texte de preésentation*/
+article {
+    padding: 20px;
+    background-color: #ffffff46;
+    box-shadow: var(--color-noir) 5px 5px 10px 0px;
+}
+
+/* Le choix de site */
+iframe {
+    width: 60%;
+    aspect-ratio: 16/9;
+    display: block;
+    margin: 20px auto;
+}
+
+#sites {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items:  start;
+}
+
+.site {
+    margin: 15px;
+    width: 500px;
+    max-width: 75vw;
+    min-width: 20vw;
+    aspect-ratio: 1/1;
+    border-radius: 10%;
+    box-shadow: var(--color-noir)2px 2px 5px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.nomsite {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 70%;
+    font-weight: 800;
+    color: var(--color-bleuclair);
+    -webkit-text-stroke: var(--color-noir) 1px;
+    
+}
+
+#arm {
+    background-image: url('../image/e2cArm.png');
+}
+
+#lille {
+    background-image: url('../image/e2cLille.png');
+}
+
+#rbx {
+    background-image: url('../image/e2cRoubaix.png');
+}
+
+#sainto {
+    background-image: url('../image/e2cSto.png');
+}
+
+
+/*la selection*/
+
+/*footer*/
+
+footer {
+    position: relative;
+    top: 28vh;
+    width: 100vw;
+    background-color: var(--color-Rose);
+    color: var(--color-noir);
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items:  stretch;
+}
+
+footer>div {
+    width: 25%;
+    padding: 10px;
+
+}
